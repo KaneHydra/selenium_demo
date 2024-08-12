@@ -1,4 +1,5 @@
 # -*- coding=utf-8 -*-
+import os
 import numpy as np
 import pandas as pd
 import polars as pl
@@ -120,4 +121,5 @@ with webdriver.Chrome(options=chrome_options, service=chrome_services) as driver
 
     last_update_time = df["資料時間"].max().strftime("%Y-%m-%d_%H-%M")
 
+    os.makedirs("./data", exist_ok=True)
     df.to_csv(f"./data/currency-price_{last_update_time}.csv", header=True, index=False)
