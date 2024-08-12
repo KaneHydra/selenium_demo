@@ -1,0 +1,11 @@
+rich
+numpy
+pandas
+polars
+requests
+requests-html
+bs4
+selenium
+undetected-chromedriver
+nodriver
+webdriver-manager
