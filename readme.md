@@ -11,8 +11,8 @@
 
 ## css selector
 
-[mozilla dev: CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)
+[mozilla dev: CSS selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_selectors)  
 [CSS-tricks: CSS selectors](https://css-tricks.com/css-selectors/)
 
-get child element
+get child element  
 get next brother element
