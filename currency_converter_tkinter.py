@@ -1,13 +1,29 @@
 # -*- coding=utf-8 -*-
+import os
+import sys
+import csv
+from rich import print
 import tkinter as tk
 from tkinter import ttk
-import csv
 
 # Read the CSV file and store the data in a dictionary
 currency_data = {}
-with open(
-    "./data/currency-price_2024-08-12_10-05.csv", newline="", encoding="utf-8"
-) as csvfile:
+
+if os.path.exists("./data"):
+    print("找不到data資料夾!")
+    sys.exit()
+
+files = os.listdir("./data")
+if len(files) == 0:
+    print("找不到檔案!")
+    sys.exit()
+
+sorted(files)
+
+path = os.path.join("./data", files[-1])
+
+
+with open(path, newline="", encoding="utf-8") as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         currency_data[row["外幣"]] = row
